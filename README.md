@@ -2,7 +2,7 @@
 <p>Решение тестового задания на позицию Golang стажёр</p>
 <hr />
 <h2>Задание</h2>
-<p><img src=![image](https://github.com/Serveresty/OZONTestCaseLinks/assets/99687697/d8484c38-7b99-430b-bd16-b2439b8cd6d1)/></p>
+<p><img src="https://github.com/Serveresty/OZONTestCaseLinks/assets/99687697/d8484c38-7b99-430b-bd16-b2439b8cd6d1"/></p>
 <hr />
 <h2>Для начала</h2>
 <p>Для запуска сервиса напрямую(не docker образ): 
@@ -28,7 +28,7 @@ P.S. Указывается .env файл и порты сервиса, т.к. �
 <br>
 Пример отправки POST запроса:
 <br>
-<img src=![image](https://github.com/Serveresty/OZONTestCaseLinks/assets/99687697/08bc31d9-e3be-4e83-a97d-c41011340a10)/>
+<img src="https://github.com/Serveresty/OZONTestCaseLinks/assets/99687697/08bc31d9-e3be-4e83-a97d-c41011340a10"/>
 <br>
 Для получения изначальной ссылки отправляется запрос через укороченную ссылку.
 </p>
