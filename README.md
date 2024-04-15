@@ -4,7 +4,7 @@
 <h2>Задание</h2>
 <p><img src="https://github.com/Serveresty/OZONTestCaseLinks/assets/99687697/d8484c38-7b99-430b-bd16-b2439b8cd6d1"/></p>
 <hr />
-<h2>Для начала</h2>
+<h2>Запуск</h2>
 <p>Для запуска сервиса напрямую(не docker образ): 
 <br>
 <pre>
@@ -21,6 +21,8 @@ docker-compose --env-file configs/.env run -p 8080:8080 app ./build/main --STORA
 <br>
 P.S. Указывается .env файл и порты сервиса, т.к. какой-то трабл с этим...
 </p>
+<br>
+Ссылка на этот репозиторий на Docker Hub: https://hub.docker.com/r/serveresta1703/ozontestcaselinks-app
 <hr />
 <h2>Описание методов</h2>
 <p>Все методы для работы с базой данных и кешем не учитывают вхождения одних и тех же данных(это сервисы только для доступа к базе). Всё это учитывается методом database.ReduceLink() и database.OriginalLink.</p>
