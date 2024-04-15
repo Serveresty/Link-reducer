@@ -8,9 +8,11 @@
 <h2>Для начала</h2>
 <p>Для запуска сервиса напрямую(не docker образ): 
 <br>
+<pre>
 ```bash
 go run ./cmd/main.go -storage="in-memory"
 ```
+</pre>
 <br>
 P.S. В параметр storage можно записать "postgresql" или "in-memory", иначе выбрасываем.
 </p>
