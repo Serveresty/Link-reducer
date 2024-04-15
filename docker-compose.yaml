@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+  app:
+    container_name: ozon_links
+    build: ./
+    env_file:
+      - ./configs/.env
+    depends_on:
+      - db
+      - test_db
+    ports:
+      - ${SERVER_PORT}:8080
+    hostname: ${SERVER_HOST}
+    environment:
+      - STORAGE=${STORAGE}
+    command: ["./build/main"]
+    restart: always
+
+  db:
+    container_name: postgres_main
+    image: postgres
+    environment:
+      - POSTGRES_DB=${DB_NAME}
+      - POSTGRES_USER=${DB_USERNAME}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+    ports:
+      - ${DB_PORT}:5432
+    hostname: ${DB_HOST}
+    restart: always
+
+  test_db:
+    container_name: postgres_test
+    image: postgres
+    environment:
+      - POSTGRES_DB=${DB_TEST_NAME}
+      - POSTGRES_USER=${DB_USERNAME}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+    ports:
+      - 54321:54321
+    hostname: ${DB_HOST}
+    restart: always
