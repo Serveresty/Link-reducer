@@ -40,7 +40,7 @@ func TestLinkReducerDBCreateShortLink(t *testing.T) {
 		t.Fatalf("error start transaction: %s", err.Error())
 	}
 
-	link := "https://vk.com/feed"
+	link := "https://www.ozon.ru/"
 
 	jsonResp, err := json.Marshal(link)
 	if err != nil {
@@ -94,7 +94,7 @@ func TestLinkReducerDBGetLink(t *testing.T) {
 		t.Fatalf("error start transaction: %s", err.Error())
 	}
 
-	link := "https://vk.com/feed"
+	link := "https://www.ozon.ru/"
 
 	jsonResp, err := json.Marshal(link)
 	if err != nil {
@@ -149,7 +149,7 @@ func TestLinkReducerMemCreateShortLink(t *testing.T) {
 	database.NewCache()
 	database.Storage = "in-memory"
 
-	link := "https://vk.com/feed"
+	link := "https://www.ozon.ru/"
 
 	jsonResp, err := json.Marshal(link)
 	if err != nil {
@@ -180,7 +180,7 @@ func TestLinkReducerMemGetLink(t *testing.T) {
 	database.NewCache()
 	database.Storage = "in-memory"
 
-	link := "https://vk.com/feed"
+	link := "https://www.ozon.ru/"
 
 	jsonResp, err := json.Marshal(link)
 	if err != nil {
