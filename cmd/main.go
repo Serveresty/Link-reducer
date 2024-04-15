@@ -18,7 +18,8 @@ func init() {
 }
 
 func main() {
-	storage := flag.String("storage", "postgresql", "Тип хранилища postgresql/in-memory")
+	log.Println("Service started")
+	storage := flag.String("STORAGE", "postgresql", "Тип хранилища postgresql/in-memory")
 	flag.Parse()
 
 	switch *storage {
@@ -35,8 +36,8 @@ func main() {
 	transport.Routs(mux)
 
 	addr := configs.LoadServerConfig()
-
-	if err := http.ListenAndServe(addr.Host+addr.Port, mux); err != nil {
+	log.Println("listening " + addr.Host + ":" + addr.Port)
+	if err := http.ListenAndServe(addr.Host+":"+addr.Port, mux); err != nil {
 		log.Fatalf("Error starting server: %s", err.Error())
 	}
 }
@@ -52,8 +53,10 @@ func postgresHandler() {
 	if err != nil {
 		log.Fatalf("Error creating base tables: %s", err.Error())
 	}
+	log.Println("postgresql started")
 }
 
 func inMemHandler() {
 	database.NewCache()
+	log.Println("in-memory started")
 }
