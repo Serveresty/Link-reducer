@@ -1,4 +1,4 @@
-<h1>Ozon Link reducer</h1>
+<h1>Link reducer (OzonTestCase)</h1>
 <p>Решение тестового задания на позицию Golang стажёр</p>
 <hr />
 <h2>Задание</h2>
